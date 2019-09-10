@@ -1,0 +1,12 @@
+{{ obs$ | async | json }}
+
+
+<br />
+<input type="text" #num>
+<button (click)="updateCharacter(num.value)" >Get</button>
+
+<br />
+<button (click)="showSecond = !showSecond">Show Second</button>
+<p *ngIf="showSecond">
+{{ obs$ | async | json }}
+</p>
